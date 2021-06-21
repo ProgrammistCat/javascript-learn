@@ -514,7 +514,7 @@ for (let i = 100; i >= 1; i--) {
      }
 }
 
-for (let a = 0, let i = 1; i <= 1000; i++) {
+for (let a = 0, i = 1; i <= 1000; i++) {
      if (i % 2 == 0) {
         console.log(a += i)
      }
@@ -588,9 +588,12 @@ if (one <= two) {
 * (вывести в консоле)
 * */
 
-for (let chart = "", number = 2; number <= 100; number++) {
-    chart = `
-    
+
+
+
+for (let number = 2; number <= 100; number++) {
+    let chart = `
+
         ${number} * 1 = ${number}
         ${number} * 2 = ${number * 2}
         ${number} * 3 = ${number * 3}
@@ -601,8 +604,13 @@ for (let chart = "", number = 2; number <= 100; number++) {
         ${number} * 8 = ${number * 8}
         ${number} * 9 = ${number * 9}
         ${number} * 10 = ${number * 10}
-        
+
     `
+
+    // for (let i = 1; i <= 10; i++) {
+    //     console.log(`${number} * ${i} = ${number * i}`)
+    // }
+
     console.log (chart)
 }
 
@@ -614,3 +622,134 @@ for (let chart = "", number = 2; number <= 100; number++) {
 */
 
 //Домашка сделана!
+
+
+
+
+
+
+
+
+// let students = [
+//     'first',
+//     'second',
+//     'third'
+// ]
+//
+// // let a = 'first'
+// // let b = 'second'
+// // let c = 'third'
+//
+//
+// console.log(students[2])
+
+
+
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i])
+// }
+
+// let arr = [1, 2, 3, 4, 5, 6]
+
+
+
+
+
+//
+// let summa = 0
+//
+// for (let i = 0; i < arrStudentPrice.length; i++) {
+//     summa += arrStudentPrice[i]
+// }
+//
+// console.log(summa / arrStudentPrice.length)
+
+/*
+*
+* 1. Сумма значений
+* 2. Ср Ариф значений
+* 3. Найти макс. значение
+*   3.1 Найти макс. значение (и их кол-во)
+* 4. Найти мин. значение
+*   4.1 Найти мин. значение (и их кол-во)
+*
+* */
+
+
+let arrStudentPrice = [
+    2, 7, 3, 4, 2, 7, 6, 3
+]
+
+//1. Сумма всех значений:
+
+let summa = 0
+
+for (let i = 0; i < arrStudentPrice.length; i++) {
+    summa += arrStudentPrice[i]
+}
+
+console.log("Сумма всех значений - " + summa)
+
+//2. Среднее арифметическое всех значений:
+
+let srArif = 0
+
+for (let i = 0; i < arrStudentPrice.length; i++) {
+    srArif += arrStudentPrice[i]
+}
+
+console.log("Среднее арифметическое всех значений - " + srArif / arrStudentPrice.length)
+
+//3. Максимальное значение:
+
+let max = arrStudentPrice[0]
+
+for (let i = 0; i < arrStudentPrice.length; i++) {
+    if (max < arrStudentPrice[i]) {
+        max = arrStudentPrice[i]
+    }
+}
+
+console.log("Максимальное значение - " + max)
+
+//3.1. Кол-во максимальных значений:
+
+let maxKolvo = 0
+
+for (let i = 0; i < arrStudentPrice.length; i++) {
+    if (max === arrStudentPrice[i]) {
+        maxKolvo += arrStudentPrice[i]
+    }
+}
+
+console.log("Кол-во всех максимальных значений - " + maxKolvo / max)
+
+//4. Минимальное значение:
+
+let min = arrStudentPrice[0]
+
+for (let i = 0; i < arrStudentPrice.length; i++) {
+    if (min > arrStudentPrice[i]) {
+        min = arrStudentPrice[i]
+    }
+}
+
+console.log("Минимальное значение - " + min)
+
+//4.1. Кол-во минимальных значений:
+
+let minKolvo = 0
+
+for (let i = 0; i < arrStudentPrice.length; i++) {
+    if (min === arrStudentPrice[i]) {
+        minKolvo += arrStudentPrice[i]
+    }
+}
+
+console.log("Кол-во всех минимальных значений - " + minKolvo / min)
+
+
+
+
+
