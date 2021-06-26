@@ -749,7 +749,24 @@ for (let i = 0; i < arrStudentPrice.length; i++) {
 
 console.log("Кол-во всех минимальных значений - " + minKolvo / min)
 
+// Дополнительное д.з.
 
+//1. Полуёлочка
 
+let number = prompt ("Введите число")
+let score = 1
 
+for (let string = ""; score <= number; score++) {
+    string += " #"
 
+    console.log(string)
+}
+
+//2. Шахматная доска
+
+let number2 = prompt ("Введите число")
+let sign = ""
+
+for (let score2 = 1; score2 <= number2; score++) {
+
+}
